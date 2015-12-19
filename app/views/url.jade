@@ -1,0 +1,10 @@
+extends _base
+
+block head
+  if (error)
+    title Error
+  else
+    title URL is loading...
+block body
+  if (error)
+    h1 #{error}

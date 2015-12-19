@@ -1,0 +1,28 @@
+extends _base
+
+block head
+  title URL shortener
+block body
+  if (error || !result)
+    form(method="post")
+      h1 URL Shrtnr
+      p
+        label
+          | URL to shorten
+          br
+          input(type="text", name="url",required="required",placeholder="http://",pattern="https?://.+",value="#{viewpost.url}")
+      p
+        label
+          | Short URL (optional)
+          br
+      input(type="text", name="hash",pattern="[A-Za-z0-9]{4,32}+",value="#{viewpost.hash}")
+      p
+        button(type="submit")
+          | Shrtn!
+      if (error)
+        p(style='color:red') #{error}
+  if (result)
+    h1 URL shrtnd!
+    h2
+      a(href='/' + result.hash)
+        | #{result.hash}

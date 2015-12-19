@@ -1,0 +1,9 @@
+{
+  "ext": "js json jade",
+  "ignore": [ ".git", "node_modules/**" ],
+  "env": {
+    "PORT": 8080,
+    "NODE_ENV": "development",
+    "API_KEY": "xLJmX1nxns4oKgdUYegQCaNWEmmYPNRdaonpKE99"
+  }
+}
